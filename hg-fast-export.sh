@@ -17,6 +17,10 @@ SFX_STATE="state"
 GFI_OPTS=""
 PYTHON=${PYTHON:-python}
 
+# Use brew mercurial
+PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH
+
 USAGE="[--quiet] [-r <repo>] [--force] [-m <max>] [-s] [-A <file>] [-M <name>] [-o <name>]"
 LONG_USAGE="Import hg repository <repo> up to either tip or <max>
 If <repo> is omitted, use last hg repository as obtained from state file,
